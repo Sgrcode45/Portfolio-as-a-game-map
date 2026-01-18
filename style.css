@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(#0f2027, #203a43, #2c5364);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+/* Title */
+.title {
+  margin-top: 20px;
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+/* Map container */
+.map {
+  position: relative;
+  width: 800px;
+  height: 450px;
+  background: linear-gradient(#1e3c2f, #3b7a57);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+/* Path */
+.path {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255,255,255,0.1) 10px,
+      rgba(255,255,255,0.1) 20px
+    );
+  opacity: 0.15;
+}
+
+/* Location base */
+.location {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, #ffd27d, #c8963e);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* Emoji icon */
+.location span {
+  font-size: 2.2rem;
+}
+
+/* Hover effect */
+.location:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 30px rgba(255,255,255,0.8);
+}
+
+/* Text hidden by default */
+.location p {
+  opacity: 0;
+  font-size: 0.85rem;
+  transition: opacity 0.4s;
+}
+
+/* Reveal on hover */
+.location:hover p {
+  opacity: 1;
+}
+
+/* Positioning */
+.home {
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+
+.about {
+  top: 15%;
+  left: 25%;
+}
+
+.skills {
+  bottom: 10%;
+  left: 45%;
+}
+
+.projects {
+  top: 15%;
+  right: 25%;
+}
+
+.contact {
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+}
